@@ -344,6 +344,94 @@
             </div>
         </div>
     </div>
+    <section id="resources-map" class="py-5 bg-light">
+		<div class="container">
+			<h2 class="text-center mb-5">Interactive map of educational resources</h2>
+        
+			<div class="row mb-4">
+				<div class="col-lg-8 mx-auto">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<div class="input-group">
+								<input type="text" class="form-control" id="map-search" placeholder="Поиск: языковые курсы, библиотеки, кафе...">
+								<button class="btn btn-primary" id="map-search-btn">
+									<i class="bi bi-search"></i> Search
+								</button>
+							</div>
+                        
+							<div class="row mt-3 g-2" id="map-filters">
+								<div class="col-6 col-md-3">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="filter-education" checked>
+										<label class="form-check-label" for="filter-education">
+											Educational institutions
+										</label>
+									</div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="filter-libraries" checked>
+                                    <label class="form-check-label" for="filter-libraries">
+                                        Libraries
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="filter-centers" checked>
+                                    <label class="form-check-label" for="filter-centers">
+                                        Cultural centers
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="filter-cafes" checked>
+                                    <label class="form-check-label" for="filter-cafes">
+                                        Language cafes
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="map-container" style="height: 500px; border-radius: 10px; overflow: hidden;" class="shadow">
+            <div id="map" style="height: 100%; width: 100%;"></div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">How to use the card</h5>
+                        <ul>
+                            <li>Use the search to quickly find places</li>
+                            <li>Filter the results by resource type</li>
+                            <li>Click on the marker to get information.</li>
+                            <li>Use the zoom to view it in detail.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Popular resources in Moscow</h5>
+                        <ul>
+								<li>Library of Foreign Literature</li>
+								<li>The Center of the Russian Language of Moscow State University</li>
+								<li>Polyglot Language Club</li>
+								<li>Language Exchange Cafe "Language Cafe"</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
     <footer id="contact" class="py-5">
         <div class="container">
             <div class="row">
@@ -368,5 +456,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=API&lang=ru_RU" type="text/javascript"></script>
+	<script src="js/map.js"></script>
 </body>
 </html>
